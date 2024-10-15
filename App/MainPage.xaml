@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MainPage">
+
+
+    <VerticalStackLayout Spacing="50">
+        <Grid
+                RowDefinitions="Auto, Auto"
+                RowSpacing="25"
+                >
+
+            <Frame
+                    Grid.Row="0"
+                    CornerRadius="0"
+                    Background="#22b3ff"
+                    HeightRequest="65"
+                    HorizontalOptions="Fill"
+                    >
+                <ImageButton
+                        Source="profileicon2.png"
+                        HorizontalOptions="End"
+                        HeightRequest="65"
+                        WidthRequest="65"
+                    Clicked="GoProfilePage"
+                        />
+            </Frame>
+
+
+            <Label Text="MATERIAS" 
+                       Grid.Row="1"
+                       HorizontalOptions="Center"
+                       TextColor="#5ac6ff"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       />
+
+        </Grid>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+              ColumnDefinitions="Auto,Auto"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              ColumnSpacing="30"
+              RowSpacing="10"
+              >
+            <ImageButton Source="ciencias.png"
+                             Grid.Row="0" Grid.Column="0"
+                             Background="#c1ff72"
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="15"
+                             Padding="10"
+                         Clicked="GoCienciaPage"
+                             />
+            <Label Text="Ciencias"
+                       Grid.Row="1" Grid.Column="0"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       />
+
+
+            <ImageButton Source="lenguaje.png"
+                             Background="#ffde59"
+                             Grid.Row="0" Grid.Column="1"
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="15"
+                             Padding="10"
+                         Clicked="GoLenguajePage"
+                             />
+            <Label Text="Lenguaje"
+                       Grid.Row="1" Grid.Column="1"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       />
+
+
+            <ImageButton Source="sociales.png"
+                             Background="#1976d2"
+                             Grid.Row="2" Grid.Column="0"
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="15"
+                             Padding="10"
+                         Clicked="GoSocialesPage"
+                             />
+            <Label Text="Sociales"
+                       Grid.Row="3" Grid.Column="0"
+                       WidthRequest="125"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       />
+
+
+            <ImageButton Source="matematica.png"
+                             Grid.Row="2" Grid.Column="1"
+                             Background="#ff3131"
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="15"
+                             Padding="10"
+                         Clicked="GoMatematicasPage"
+                             />
+            <Label Text="Matemáticas"
+                       Grid.Row="3" Grid.Column="1"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       />
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

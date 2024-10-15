@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.LoginPage"
+             >
+    <VerticalStackLayout 
+        Padding="50"
+        Spacing="200">
+        <Grid
+            RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+            RowSpacing="50"
+            HorizontalOptions="Center"
+            >
+            
+            <Image Source="eduaccess.png"
+                   Grid.Row="0"
+                                      />
+
+            <Label Text="Inicia sesión en tu cuenta"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"
+                   TextColor="Gray"
+                   FontSize="Title"
+                   />
+
+            <Entry Placeholder="Usuario"
+                   PlaceholderColor="Gray"
+                   Grid.Row="2"
+                   WidthRequest="300"
+                   FontSize="20"
+                   CursorPosition="0"
+                />
+
+            <Entry Placeholder="Contraseña"
+                   PlaceholderColor="Gray"
+                   Grid.Row="3"
+                   IsPassword="True"
+                   WidthRequest="300"
+                   FontSize="20"
+                   />
+
+            <Button Text="Iniciar Sesión"
+                    Grid.Row="4"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Background="#5ac6ff"
+                    WidthRequest="300"
+                    Clicked="GoMainPage"
+                    />
+        </Grid>
+
+        <Grid>
+            <Label 
+                HorizontalOptions="Center"
+                >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿No tienes una cuenta? "
+                              FontSize="18"
+                              />
+                        <Span Text="Crear Cuenta"
+                              TextColor="#5ac6ff"
+                              TextDecorations="Underline"
+                              FontSize="18" 
+                              />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

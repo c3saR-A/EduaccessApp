@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.InitialPage"
+             >
+
+    <VerticalStackLayout
+            Background="#5ac6ff">
+        <Grid
+                RowDefinitions="Auto, Auto"
+                ColumnDefinitions="Auto"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                RowSpacing="100"
+                >
+
+            <Image
+                    Source="eduaccess_logo.png"
+                    Grid.Row="1" Grid.Column="0"
+                    WidthRequest="290"
+                    />
+
+        </Grid>
+
+        <Grid
+                    RowDefinitions="Auto, Auto"
+                    ColumnDefinitions="Auto, Auto"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    ColumnSpacing="20"
+                    RowSpacing="30"
+                    >
+            <Button Text="Crear Cuenta"
+                    Grid.Row="1" Grid.Column="0"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#22b3ff"
+                    Clicked="GoSignPage"
+                    />
+            <Button Text="Iniciar Sesion"
+                    Grid.Row="1" Grid.Column="1"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#22b3ff"
+                    Clicked="GoLoginPage"
+                    />
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

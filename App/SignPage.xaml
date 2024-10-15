@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.SignPage"
+             >
+    <VerticalStackLayout
+        Padding="50"
+        Spacing="50"
+    >
+
+        <Grid
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+        RowSpacing="30"
+        HorizontalOptions="Center"
+        >
+
+            <Image Source="eduaccess.png"
+               Grid.Row="0"
+               />
+
+            <Label Text="Crea tu cuenta"
+               HorizontalTextAlignment="Start"
+               Grid.Row="1"
+               TextColor="Gray"
+               FontSize="Title"
+               />
+
+            <Entry Placeholder="Usuario"
+                   PlaceholderColor="Gray"
+               Grid.Row="2"
+               WidthRequest="300"
+               FontSize="20"
+               CursorPosition="0"
+               />
+
+            <Entry Placeholder="Contraseña"
+                   PlaceholderColor="Gray"
+                   IsPassword="True"
+               Grid.Row="3"
+               WidthRequest="300"
+               FontSize="20"
+               CursorPosition="0"
+               />
+
+            <Entry Placeholder="Ingrese la contraseña de nuevo"
+                   PlaceholderColor="Gray"
+                   IsPassword="True"
+               Grid.Row="4"
+               WidthRequest="300"
+               FontSize="20"
+               CursorPosition="0"
+               />
+          
+        </Grid>
+
+        <Button Text="Crear"
+            Grid.Row="5"
+            FontSize="20"
+                FontAttributes="Bold"
+            WidthRequest="300"
+            Background="#5ac6ff"
+        />
+
+    </VerticalStackLayout>
+</ContentPage>
