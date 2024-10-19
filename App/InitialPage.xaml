@@ -5,7 +5,8 @@
              >
 
     <VerticalStackLayout
-            Background="#5ac6ff">
+            Background="#5ac6ff"
+        Spacing="30">
         <Grid
                 RowDefinitions="Auto, Auto"
                 ColumnDefinitions="Auto"
@@ -16,22 +17,21 @@
 
             <Image
                     Source="eduaccess_logo.png"
-                    Grid.Row="1" Grid.Column="0"
+                    Grid.Row="1"
                     WidthRequest="290"
                     />
 
         </Grid>
 
         <Grid
-                    RowDefinitions="Auto, Auto"
+                    RowDefinitions="Auto"
                     ColumnDefinitions="Auto, Auto"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     ColumnSpacing="20"
-                    RowSpacing="30"
                     >
             <Button Text="Crear Cuenta"
-                    Grid.Row="1" Grid.Column="0"
+                    Grid.Column="0"
                     FontSize="20"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"

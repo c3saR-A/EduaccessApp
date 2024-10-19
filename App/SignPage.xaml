@@ -25,7 +25,8 @@
                FontSize="Title"
                />
 
-            <Entry Placeholder="Usuario"
+            <Entry x:Name="UsuarioEntry"
+                Placeholder="Usuario"
                    PlaceholderColor="Gray"
                Grid.Row="2"
                WidthRequest="300"
@@ -33,7 +34,8 @@
                CursorPosition="0"
                />
 
-            <Entry Placeholder="Contraseña"
+            <Entry x:Name="ContraseñaEntry"
+                Placeholder="Contraseña"
                    PlaceholderColor="Gray"
                    IsPassword="True"
                Grid.Row="3"
@@ -42,7 +44,8 @@
                CursorPosition="0"
                />
 
-            <Entry Placeholder="Ingrese la contraseña de nuevo"
+            <Entry x:Name="ConfirmacionEntry"
+                Placeholder="Ingrese la contraseña de nuevo"
                    PlaceholderColor="Gray"
                    IsPassword="True"
                Grid.Row="4"
@@ -59,6 +62,7 @@
                 FontAttributes="Bold"
             WidthRequest="300"
             Background="#5ac6ff"
+                Clicked="CreateUser"
         />
 
     </VerticalStackLayout>

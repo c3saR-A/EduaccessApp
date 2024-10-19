@@ -13,7 +13,7 @@ namespace App
         //Métodos para navegar a las paginas
         private async void GoCienciaPage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CienciaPage(), animated: false);
+            await Navigation.PushAsync(new CienciaPage());
         }
 
         private async void GoLenguajePage(object sender, EventArgs e)
