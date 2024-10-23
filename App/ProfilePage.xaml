@@ -1,24 +1,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App.ProfilePage"
-             Title="">
+             x:Class="App.ProfilePage">
     <!-- Contenedor principal -->
     <VerticalStackLayout Padding="0">
 
         <!-- Encabezado personalizado solo con el título centrado -->
-        <Grid BackgroundColor="#00ADEF" HeightRequest="80" Padding="10, 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <!-- Título centrado -->
+        <HorizontalStackLayout 
+              BackgroundColor="#22b3ff"
+              HeightRequest="65" 
+              Spacing="80">
+            <ImageButton Source="backicon.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="35"
+                   WidthRequest="70"
+                   Clicked="BackMainPage"/>
             <Label Text="Perfil"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   TextColor="White"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-        </Grid>
+             TextColor="White"
+             FontSize="35"
+             FontAttributes="Bold"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
 
         <!-- Contenido del perfil -->
         <ScrollView>
@@ -38,24 +40,27 @@
                     <VerticalStackLayout Spacing="10">
                         <HorizontalStackLayout Spacing="10">
                             <Image Source="perfil3.png" WidthRequest="30" HeightRequest="30"/>
-                            <Label Text="Pepito" FontSize="Medium" VerticalOptions="Center" />
+                            <Label Text="Pepito" FontSize="Medium" VerticalOptions="End" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
-                            <Image Source="grado.png" WidthRequest="40" HeightRequest="60"/>
+                            <Image Source="grado.png" WidthRequest="30" HeightRequest="40"/>
                             <Label Text="2 Grado" FontSize="Medium" VerticalOptions="Center" />
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- Sección de botones con mayor espaciado -->
-                <Grid Padding="10, 40, 10, 0" ColumnDefinitions="*,*" HorizontalOptions="Center" VerticalOptions="Center">
-                    <VerticalStackLayout Padding="10" HorizontalOptions="End">
-                        <Image Source="clase.png" WidthRequest="80" HeightRequest="80"/>
-                        <Label Text="Mis clases" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                <!-- Sección de botones: Mis clases y Resultados -->
+                <Grid Padding="60" ColumnDefinitions="*,*" ColumnSpacing="80">
+                    <!-- Columna izquierda -->
+                    <VerticalStackLayout Padding="10" HorizontalOptions="Center" Grid.Column="0" Spacing="10">
+                        <Image Source="clase.png" WidthRequest="100"/>
+                        <Label Text="Mis clases" FontSize="Medium" HorizontalOptions="Center" WidthRequest="100"/>
                     </VerticalStackLayout>
-                    <VerticalStackLayout Padding="10" HorizontalOptions="Center">
-                        <Image Source="practice.png" WidthRequest="80" HeightRequest="80"/>
-                        <Label Text="Resultados" FontSize="Medium" HorizontalOptions="Center"/>
+
+                    <!-- Columna derecha -->
+                    <VerticalStackLayout Padding="10" HorizontalOptions="Center" Grid.Column="1" Spacing="10">
+                        <Image Source="practice.png" WidthRequest="100"/>
+                        <Label Text="Resultados" FontSize="Medium" HorizontalOptions="Center" WidthRequest="100"/>
                     </VerticalStackLayout>
                 </Grid>
 
@@ -63,8 +68,6 @@
         </ScrollView>
 
     </VerticalStackLayout>
-
 </ContentPage>
-
 
 
