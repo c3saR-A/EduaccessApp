@@ -2,9 +2,9 @@ namespace App;
 
 public partial class MatematicasPage : ContentPage
 {
-	public MatematicasPage()
-	{
-		InitializeComponent();
+    public MatematicasPage()
+    {
+        InitializeComponent();
         //Hacer invisible la barra de navegación
         Shell.SetNavBarIsVisible(this, false);
     }

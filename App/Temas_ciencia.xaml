@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Temas_ciencia"
+             >
+    <VerticalStackLayout
+        Spacing="30">
+        <HorizontalStackLayout
+            Background="#c1ff72"
+            HeightRequest="65" 
+            Spacing="80"
+            >
+            <ImageButton Source="backicon.png"
+               HorizontalOptions="Start"
+               HeightRequest="35"
+               WidthRequest="70"
+                         Clicked="BackCienciaPage"
+             />
+            <Label Text="Clases"
+               TextColor="White"
+               FontSize="35"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               />
+        </HorizontalStackLayout>
+
+
+        
+             
+            <VerticalStackLayout Spacing="60" >
+                <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+
+                    <!-- Picker (lista desplegable) -->
+                    <Picker Title="TEMAS" VerticalOptions="CenterAndExpand" FontSize="25">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>El reino de los animales</x:String>
+                                <x:String>El reino de las plantas</x:String>
+                                <x:String>Los sentidos</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                </StackLayout>
+                <Button
+         Text="Continuar"
+         TextColor="white"
+         FontSize="20"
+         Grid.Row="4"
+         WidthRequest="300"
+         FontAttributes="Bold"
+         BackgroundColor="#c1ff72"/>
+            </VerticalStackLayout>
+
+
+    </VerticalStackLayout>
+    
+    
+
+    
+</ContentPage>

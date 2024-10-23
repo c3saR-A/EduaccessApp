@@ -2,9 +2,9 @@ namespace App;
 
 public partial class SignPage : ContentPage
 {
-	public SignPage()
-	{
-		InitializeComponent();
+    public SignPage()
+    {
+        InitializeComponent();
 
         Shell.SetNavBarIsVisible(this, false);
     }

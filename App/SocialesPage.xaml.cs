@@ -2,9 +2,9 @@ namespace App;
 
 public partial class SocialesPage : ContentPage
 {
-	public SocialesPage()
-	{
-		InitializeComponent();
+    public SocialesPage()
+    {
+        InitializeComponent();
         //Hacer invisible la barra de navegación
         Shell.SetNavBarIsVisible(this, false);
     }

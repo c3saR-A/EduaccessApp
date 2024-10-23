@@ -1,14 +1,70 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App.ProfilePage"
-             Title="ProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Estamos en desarrollo" 
-            FontSize="Title"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="">
+    <!-- Contenedor principal -->
+    <VerticalStackLayout Padding="0">
+
+        <!-- Encabezado personalizado solo con el título centrado -->
+        <Grid BackgroundColor="#00ADEF" HeightRequest="80" Padding="10, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Título centrado -->
+            <Label Text="Perfil"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+
+        <!-- Contenido del perfil -->
+        <ScrollView>
+            <VerticalStackLayout Padding="20">
+
+                <!-- Imagen de perfil -->
+                <Frame WidthRequest="150" HeightRequest="150" CornerRadius="75" HorizontalOptions="Center" Padding="0" HasShadow="True">
+                    <Image Source="profileicon2.png" Aspect="AspectFill"/>
+                </Frame>
+
+                <!-- Nombre y rol -->
+                <Label Text="Pepito" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Estudiante" FontSize="Medium" HorizontalOptions="Center" />
+
+                <!-- Información adicional -->
+                <Frame CornerRadius="10" Padding="10" Margin="0,20,0,0" BackgroundColor="#F0F0F0" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="perfil3.png" WidthRequest="30" HeightRequest="30"/>
+                            <Label Text="Pepito" FontSize="Medium" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="grado.png" WidthRequest="40" HeightRequest="60"/>
+                            <Label Text="2 Grado" FontSize="Medium" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Sección de botones con mayor espaciado -->
+                <Grid Padding="10, 40, 10, 0" ColumnDefinitions="*,*" HorizontalOptions="Center" VerticalOptions="Center">
+                    <VerticalStackLayout Padding="10" HorizontalOptions="End">
+                        <Image Source="clase.png" WidthRequest="80" HeightRequest="80"/>
+                        <Label Text="Mis clases" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Padding="10" HorizontalOptions="Center">
+                        <Image Source="practice.png" WidthRequest="80" HeightRequest="80"/>
+                        <Label Text="Resultados" FontSize="Medium" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
     </VerticalStackLayout>
+
 </ContentPage>
+
+
+
