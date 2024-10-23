@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using App.DataAccess;
 
 namespace App
 {
@@ -14,6 +15,13 @@ namespace App
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            builder.Services.AddDbContext<AppDbContext>();
+            builder.Services.AddTransient<SignPage>();
+
+            var dbContext = new AppDbContext();
+            dbContext.Database.EnsureCreated();
+            dbContext.Dispose();
 
 #if DEBUG
     		builder.Logging.AddDebug();

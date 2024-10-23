@@ -46,9 +46,9 @@
             <ImageButton Source="ciencias.png"
                              Grid.Row="0" Grid.Column="0"
                              Background="#c1ff72"
+                             CornerRadius="15"
                              HeightRequest="150"
                              WidthRequest="150"
-                             CornerRadius="15"
                              Padding="10"
                          Clicked="GoCienciaPage"
                              />

@@ -1,16 +1,23 @@
 using App.Models;
+using App.DataAccess;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.Maui.Graphics.Text;
 
 namespace App;
 
 public partial class SignPage : ContentPage
 {
-	public SignPage()
-	{
-		InitializeComponent();
+    
+    private readonly AppDbContext _dbcontext;
 
+    public SignPage(AppDbContext dbcontext)
+    {
+        _dbcontext = dbcontext;
+        InitializeComponent();
         Shell.SetNavBarIsVisible(this, false);
+       
     }
+
 
 	private async void CreateUser(object sender, EventArgs e)
 	{
@@ -41,14 +48,11 @@ public partial class SignPage : ContentPage
             Password = Password,
             Nivel = Nivel,
         };
+        // Guardar datos
+        _dbcontext.Usuarios.Add(NuevoUsuario);
+        _dbcontext.SaveChangesAsync();
 
-        //Guardar Datos
-        using (var Db = new AppDbContext())
-        {
-            Db.Usuarios.Add(NuevoUsuario);
-            Db.SaveChanges();
-        }
-
-        await DisplayAlert("Éxito", "Usuario creado exitosamente.", "OK");
+        await DisplayAlert("Éxito", "Usuario creado exitosamente.", "Ok");
+        await Navigation.PushAsync(new MainPage());
     }
 }

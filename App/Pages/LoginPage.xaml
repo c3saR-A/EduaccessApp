@@ -24,6 +24,7 @@
                    />
 
             <Entry Placeholder="Usuario"
+                   x:Name="UsuarioEntry"
                    PlaceholderColor="Gray"
                    Grid.Row="2"
                    WidthRequest="300"
@@ -32,6 +33,7 @@
                 />
 
             <Entry Placeholder="Contraseña"
+                   x:Name="PasswordEntry"
                    PlaceholderColor="Gray"
                    Grid.Row="3"
                    IsPassword="True"
@@ -45,7 +47,7 @@
                     FontAttributes="Bold"
                     Background="#5ac6ff"
                     WidthRequest="300"
-                    Clicked="GoMainPage"
+                    Clicked="Login"
                     />
         </Grid>
 

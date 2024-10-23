@@ -1,3 +1,5 @@
+using App.DataAccess;
+
 namespace App;
 
 public partial class InitialPage : ContentPage
@@ -9,11 +11,13 @@ public partial class InitialPage : ContentPage
 
 	private async void GoLoginPage(object sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new LoginPage());
+        var dbcontext = new AppDbContext();
+        await Navigation.PushAsync(new LoginPage(dbcontext));
 	}
 
 	private async void GoSignPage(object sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new SignPage());
+        var dbcontext = new AppDbContext();
+        await Navigation.PushAsync(new SignPage(dbcontext));
 	}
 }
