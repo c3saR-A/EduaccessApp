@@ -2,12 +2,72 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App.ProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Estamos en desarrollo" 
-            FontSize="Title"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="0">
+
+        <HorizontalStackLayout 
+              BackgroundColor="#22b3ff"
+              HeightRequest="65" 
+              Spacing="80">
+            <ImageButton Source="backicon.png"
+                   HorizontalOptions="Start"
+                   HeightRequest="35"
+                   WidthRequest="70"
+                   Clicked="BackMainPage"/>
+            <Label Text="Perfil"
+             TextColor="White"
+             FontSize="35"
+             FontAttributes="Bold"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        
+        <ScrollView>
+            <VerticalStackLayout Padding="20">
+
+                <Frame WidthRequest="150" HeightRequest="150" CornerRadius="75" HorizontalOptions="Center" Padding="0" HasShadow="True">
+                    <Image Source="profileicon2.png" Aspect="AspectFill"/>
+                </Frame>
+
+                <Label Text="{Binding Nombre}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Estudiante" FontSize="Medium" HorizontalOptions="Center" />
+
+                <Frame CornerRadius="10" Padding="10" Margin="0,20,0,0" BackgroundColor="#F0F0F0" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="perfil3.png" WidthRequest="30" HeightRequest="30"/>
+                            <Label Text="{Binding Nombre}" FontSize="Medium" VerticalOptions="End" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="grado.png" WidthRequest="30" HeightRequest="40"/>
+                            <Label Text="{Binding Nivel}" FontSize="Medium" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Grid Padding="60" RowDefinitions="*,*" ColumnDefinitions="*,*" ColumnSpacing="80" RowSpacing="10">
+
+                    <ImageButton Source="clase.png"
+                                 Grid.Column="0"
+                                 Grid.Row="0"
+                                 WidthRequest="100"
+                                 Clicked="BackMainPage"
+                                 />
+                    <Label Text="Mis clases" Grid.Column="0" Grid.Row="1" 
+                           FontSize="Medium" HorizontalOptions="Center" WidthRequest="100"/>
+
+                    <ImageButton Source="practice.png"
+                                 Grid.Column="1"
+                                 Grid.Row="0"
+                                 WidthRequest="100"
+                                 Clicked="BackMainPage"
+                                 />
+                    <Label Text="Resultados" Grid.Column="1" Grid.Row="1" 
+                            FontSize="Medium" HorizontalOptions="Center" WidthRequest="100"/>
+                    
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
     </VerticalStackLayout>
 </ContentPage>

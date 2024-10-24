@@ -32,7 +32,7 @@ public partial class LoginPage : ContentPage
         {
             await DisplayAlert("Éxito", $"Bienvenido, {user.Nombre}.", "OK");
 
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new MainPage(user.Id));
         }
         else
         {

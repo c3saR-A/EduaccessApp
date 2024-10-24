@@ -53,6 +53,6 @@ public partial class SignPage : ContentPage
         _dbcontext.SaveChangesAsync();
 
         await DisplayAlert("Éxito", "Usuario creado exitosamente.", "Ok");
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new MainPage(NuevoUsuario.Id));
     }
 }

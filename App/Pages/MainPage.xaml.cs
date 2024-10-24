@@ -1,12 +1,17 @@
 ﻿
+using App.Models;
+using App.ViewModel;
+
 namespace App
 {
     public partial class MainPage : ContentPage
     {
+        private int UsuarioId;
 
-        public MainPage()
+        public MainPage(int usuarioId)
         {
             InitializeComponent();
+            UsuarioId = usuarioId;
 
             Shell.SetNavBarIsVisible(this, false);
         }
@@ -33,7 +38,7 @@ namespace App
 
         private async void GoProfilePage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProfilePage());
+            await Navigation.PushAsync(new ProfilePage(UsuarioId));
         }
     }
 
