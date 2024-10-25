@@ -1,3 +1,5 @@
+using App.Pages;
+
 namespace App;
 
 public partial class MatematicasPage : ContentPage
@@ -12,5 +14,10 @@ public partial class MatematicasPage : ContentPage
     private async void BackMainPage(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
+    }
+
+    private async void GoClass(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Temas_matematicas());
     }
 }
