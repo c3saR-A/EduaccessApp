@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Pages.Temas.Ciencia.temaciencia1">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15">
+            <HorizontalStackLayout Background="#c1ff72" HeightRequest="65" Spacing="80">
+                <ImageButton Source="backicon.png"
+                             HorizontalOptions="Start"
+                             HeightRequest="35"
+                             WidthRequest="70"
+                             Clicked="BackCienciaPage" />
+                <Label Text="Ciencias"
+                       TextColor="White"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <WebView Source="https://www.youtube.com/embed/836y8aBSnoM" 
+                     HeightRequest="200" 
+                     WidthRequest="300" />
+
+            <Label Text="¿Qué son los animales?"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#c1ff72"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   Margin="10" />
+
+            <Label Text="Los animales son seres pluricelulares y eucariotas de alimentación heterótrofa, respiración aeróbica, reproducción sexual y capacidad de desplazamiento. Este reino es uno de los más biodiversos y está compuesto por mamíferos, peces, aves, reptiles, anfibios, insectos, moluscos y anélidos, entre otros."
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="10"
+                   LineBreakMode="WordWrap" />
+
+            <Label Text="Clasifica los siguientes animales a su hábitat"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#c1ff72"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   Margin="20" />
+
+
+            <Image Source="Images/ImagenesCiencia/mariquita.png" 
+                       Aspect="AspectFit" 
+                       HeightRequest="200" 
+                       WidthRequest="200" />
+
+            <Image Source="Images/ImagenesCiencia/ImagenSavana.jpg" 
+                       Aspect="AspectFit" 
+                       HeightRequest="200" 
+                       WidthRequest="200" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
