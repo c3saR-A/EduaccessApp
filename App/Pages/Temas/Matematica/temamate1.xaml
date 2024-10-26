@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Pages.Temas.Matematica.temamate1">
+    
+
+    <VerticalStackLayout Padding="20">
+        <Label x:Name="TemaLabel"
+               FontSize="24"
+               FontAttributes="Bold"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center" />
+        <HorizontalStackLayout Background="#c1ff72" HeightRequest="65" Spacing="80">
+
+            <Label Text="Clases"
+                   TextColor="White"
+                   FontSize="35"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

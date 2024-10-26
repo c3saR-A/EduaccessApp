@@ -41,6 +41,23 @@
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\ballena.jpg" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\bosque.jpg" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\caballo.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\cerdo.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\conejo.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\elefante.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\estrella.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\granja.jpg" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\loro.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\mariquita.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\mono.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\oceano.jpg" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\oso.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\pez.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\pez2.png" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\savana.jpg" />
+		<MauiImage Include="Resources\Images\ImagenesCiencia\tigre.png" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -54,6 +71,26 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\ImagenesCiencia\ballena.jpg" />
+	  <None Remove="Resources\Images\ImagenesCiencia\bosque.jpg" />
+	  <None Remove="Resources\Images\ImagenesCiencia\caballo.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\cerdo.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\conejo.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\elefante.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\estrella.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\granja.jpg" />
+	  <None Remove="Resources\Images\ImagenesCiencia\loro.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\mariquita.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\mono.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\oceano.jpg" />
+	  <None Remove="Resources\Images\ImagenesCiencia\oso.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\pez.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\pez2.png" />
+	  <None Remove="Resources\Images\ImagenesCiencia\savana.jpg" />
+	  <None Remove="Resources\Images\ImagenesCiencia\tigre.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -91,15 +128,51 @@
 	  <MauiXaml Update="Pages\SocialesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Ciencia\temaciencia1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Ciencia\temaciencia2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Ciencia\temaciencia3.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Matematica\temamate1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Matematica\temamate2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Temas\Matematica\temamate3.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Temas_ciencias.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Temas_matematicas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Colors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Styles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\Templates.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Temas\Matematica\temamate1.xaml.cs">
+	    <DependentUpon>temamate1.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Temas\Matematica\temamate2.xaml.cs">
+	    <DependentUpon>temamate2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Temas\Matematica\temamate3.xaml.cs">
+	    <DependentUpon>temamate3.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
