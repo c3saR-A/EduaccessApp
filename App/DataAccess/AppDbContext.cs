@@ -63,9 +63,12 @@ namespace App.DataAccess
                 modelBuilder.Entity<Clase>().HasData(
                     new Clase { Id = 1, IdMateria = 1, Contenido = "El reino de los animales" },
                     new Clase { Id = 2, IdMateria = 1, Contenido = "El reino de las plantas" },
-                    new Clase { Id = 3, IdMateria = 1, Contenido = "Los sentidos" }
+                    new Clase { Id = 3, IdMateria = 1, Contenido = "Los sentidos" }, 
+                    new Clase { Id = 4, IdMateria = 4, Contenido = "Clasifiquemos por su color" },
+                    new Clase { Id = 5, IdMateria = 4, Contenido = "Identifiquemos el grande y el pequeño" },
+                    new Clase { Id = 6, IdMateria = 4, Contenido = "Identifiquemos el mediano" }
                 );
-                   
+            
         }
     }
 }

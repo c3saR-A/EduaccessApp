@@ -17,7 +17,7 @@ public partial class Temas_ciencias : ContentPage
         using (var context = new AppDbContext())
         {
             
-            var clases = await context.Clases.Include(c => c.Materia).ToListAsync();
+            var clases = await context.Clases.Include(c => c.Materia).Where(c => c.IdMateria == 1).ToListAsync();
 
             Picker picker = new Picker { Title = "TEMAS", VerticalOptions = LayoutOptions.CenterAndExpand, FontSize = 25 };
 

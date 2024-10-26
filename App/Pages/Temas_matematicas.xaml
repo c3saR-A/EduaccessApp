@@ -22,16 +22,8 @@
         </HorizontalStackLayout>
 
         <VerticalStackLayout Spacing="60">
-            <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-                <Picker Title="TEMAS" VerticalOptions="CenterAndExpand" FontSize="25">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String></x:String>
-                            <x:String></x:String>
-                            <x:String></x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+            <StackLayout x:Name="PickerstackLayout" Padding="20" VerticalOptions="CenterAndExpand">
+             
             </StackLayout>
 
             <Button Text="Continuar"

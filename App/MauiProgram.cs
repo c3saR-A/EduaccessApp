@@ -19,15 +19,22 @@ namespace App
             builder.Services.AddDbContext<AppDbContext>();
             builder.Services.AddTransient<SignPage>();
 
-            var dbContext = new AppDbContext();
-            dbContext.Database.EnsureCreated();
-            dbContext.Dispose();
 
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            var app = builder.Build();
+
+            // Inicializa la base de datos
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                //dbContext.Database.EnsureDeleted();  // Elimina la base de datos si existe
+                dbContext.Database.EnsureCreated();  // Crea la base de datos
+            }
+
+            return app;
         }
     }
 }
