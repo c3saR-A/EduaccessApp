@@ -20,4 +20,9 @@ public partial class MatematicasPage : ContentPage
     {
         await Navigation.PushAsync(new Temas_matematicas());
     }
+
+    private async void GoPractica(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PruebasMatematicas());
+    }
 }

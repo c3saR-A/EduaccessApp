@@ -61,6 +61,7 @@
                      WidthRequest="150"
                      CornerRadius="15"
                      Padding="15"
+                     Clicked="GoPractica"
                      />
 
                 <Label Text="Ejercicios"

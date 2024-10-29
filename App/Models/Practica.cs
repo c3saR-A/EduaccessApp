@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace App.Models
 {
-    public  class Materia
+    public class Practica
     {
         public int Id { get; set; }
+        public int IdMateria { get; set; }
         public string Nombre { get; set; }
-        public ICollection<Clase> Clases { get; set; }
-        public ICollection<Practica> Practicas { get; set; }
-
+        public Materia Materia { get; set; }
     }
 }

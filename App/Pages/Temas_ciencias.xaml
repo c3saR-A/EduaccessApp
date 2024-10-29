@@ -35,7 +35,9 @@
                      Grid.Row="4"
                      WidthRequest="300"
                      FontAttributes="Bold"
-                     BackgroundColor="#c1ff72"/>
+                     BackgroundColor="#c1ff72"
+                     Clicked="OnContinuarClicked"                    
+                    />
             </VerticalStackLayout>
         </VerticalStackLayout>
 </ContentPage>

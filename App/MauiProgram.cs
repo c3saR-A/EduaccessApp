@@ -30,7 +30,7 @@ namespace App
             using (var scope = app.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                //dbContext.Database.EnsureDeleted();  // Elimina la base de datos si existe
+                /*dbContext.Database.EnsureDeleted();*/  // Elimina la base de datos si existe
                 dbContext.Database.EnsureCreated();  // Crea la base de datos
             }
 

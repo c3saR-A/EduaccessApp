@@ -10,6 +10,8 @@ namespace App.DataAccess
         public DbSet<Materia> Materias { get; set; }
         public DbSet<Clase> Clases { get; set; }
 
+        public DbSet<Practica> Practicas { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string conexionDb = $"Filename={ConexionDB.RutaDB("Maui.db")}";
@@ -38,20 +40,48 @@ namespace App.DataAccess
                     entity.HasKey(columnaC => columnaC.Id);
                     entity.Property(columnaC => columnaC.Id).IsRequired().ValueGeneratedOnAdd();
                     entity.Property(columnaC => columnaC.Contenido).IsRequired();
-
+                    //Relación con Materia
                     entity.HasOne(columnaC => columnaC.Materia).WithMany(columnaM => columnaM.Clases).HasForeignKey(columna => columna.IdMateria);
                 });
 
-                modelBuilder.Entity<Progreso>(entity =>
+                modelBuilder.Entity<Practica>(entity =>
                 {
                     entity.HasKey(columnaP => columnaP.Id);
                     entity.Property(columnaP => columnaP.Id).IsRequired().ValueGeneratedOnAdd();
-                    entity.Property(columnaP => columnaP.Avance).IsRequired();
-
-                    entity.HasOne(columnaP => columnaP.usuario).WithMany().HasForeignKey(columnaP => columnaP.IdUsuario);
-
-                    entity.HasOne(columnaP => columnaP.materia).WithMany().HasForeignKey(columnaP => columnaP.IdMateria);
+                    entity.Property(columnaP => columnaP.Nombre).IsRequired();
+                    //Relación con Materia
+                    entity.HasOne(columnaP => columnaP.Materia)
+                          .WithMany(columnaM => columnaM.Practicas)
+                          .HasForeignKey(columnaP => columnaP.IdMateria);
                 });
+
+            modelBuilder.Entity<Progreso>(entity =>
+            {
+                entity.HasKey(columnaP => columnaP.Id);
+                entity.Property(columnaP => columnaP.Id).IsRequired().ValueGeneratedOnAdd();
+                entity.Property(columnaP => columnaP.ClaseCompletada).HasDefaultValue(false);
+                entity.Property(columnaP => columnaP.PracticaCompletada).HasDefaultValue(false);
+
+                // Relación con Usuario
+                entity.HasOne(columnaP => columnaP.Usuario)
+                      .WithMany()
+                      .HasForeignKey(columnaP => columnaP.IdUsuario);
+
+                // Relación con Materia
+                entity.HasOne(columnaP => columnaP.Materia)
+                      .WithMany()
+                      .HasForeignKey(columnaP => columnaP.IdMateria);
+
+                // Relación con Clase
+                entity.HasOne(columnaP => columnaP.Clase)
+                      .WithMany()
+                      .HasForeignKey(columnaP => columnaP.IdClase);
+
+                // Relación con Practica
+                entity.HasOne(columnaP => columnaP.Practica)
+                      .WithMany()
+                      .HasForeignKey(columnaP => columnaP.IdPractica);
+            });        
 
                 modelBuilder.Entity<Materia>().HasData(
                 new Materia { Id = 1, Nombre = "Ciencias" },
@@ -68,6 +98,13 @@ namespace App.DataAccess
                     new Clase { Id = 5, IdMateria = 4, Contenido = "Identifiquemos el grande y el pequeño" },
                     new Clase { Id = 6, IdMateria = 4, Contenido = "Identifiquemos el mediano" }
                 );
+
+            modelBuilder.Entity<Practica>().HasData(
+                new Practica { Id = 1, IdMateria = 1, Nombre = "Práctica de Ciencias 1" },
+                new Practica { Id = 2, IdMateria = 2, Nombre = "Práctica de Lenguaje 1" },
+                new Practica { Id = 3, IdMateria = 3, Nombre = "Práctica de Sociales 1" },
+                new Practica { Id = 4, IdMateria = 4, Nombre = "Práctica de Matemáticas 1" }
+                ); 
             
         }
     }

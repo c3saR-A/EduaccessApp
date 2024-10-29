@@ -19,4 +19,9 @@ public partial class CienciaPage : ContentPage
     {
         await Navigation.PushAsync(new Temas_ciencias());
     }
+
+    private async void GoPractica(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PruebasCiencias());
+    }
 }

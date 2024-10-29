@@ -1,3 +1,5 @@
+using App.Pages;
+
 namespace App;
 
 public partial class LenguajePage : ContentPage
@@ -15,4 +17,8 @@ public partial class LenguajePage : ContentPage
         await Navigation.PopAsync();
     }
 
+    private async void GoPractice(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PruebasLenguaje());
+    }
 }
