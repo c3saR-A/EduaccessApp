@@ -4,7 +4,7 @@ public partial class prueba1ciencias : ContentPage
 {
 	public prueba1ciencias()
 	{
-		InitializeComponent();  
+        InitializeComponent();
 
         Shell.SetNavBarIsVisible(this, false);
 	}

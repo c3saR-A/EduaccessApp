@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App.Pages.Pruebas.Ciencias.prueba1ciencias"
-             Title="prueba1ciencias">
+             x:Class="App.Pages.prueba1ciencias"
+             >
     <ScrollView>
-        <VerticalStackLayout Spacing="10" Padding="10,5,10,10">
-        <!-- Encabezado -->
-        <HorizontalStackLayout
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout
                 Background="#c1ff72"
                 HeightRequest="65"
                 Spacing="10">
