@@ -1,4 +1,5 @@
 ﻿
+using App.DataAccess;
 using App.Models;
 using App.ViewModel;
 
@@ -7,11 +8,10 @@ namespace App
     public partial class MainPage : ContentPage
     {
         private int UsuarioId;
-
         public MainPage(int usuarioId)
         {
             InitializeComponent();
-            UsuarioId = usuarioId;
+            this.UsuarioId = usuarioId;
 
             Shell.SetNavBarIsVisible(this, false);
         }

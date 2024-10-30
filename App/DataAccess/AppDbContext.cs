@@ -9,7 +9,7 @@ namespace App.DataAccess
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Materia> Materias { get; set; }
         public DbSet<Clase> Clases { get; set; }
-
+        public DbSet<Progreso> Progresos { get; set; }
         public DbSet<Practica> Practicas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

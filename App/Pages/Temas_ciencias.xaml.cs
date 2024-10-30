@@ -6,9 +6,10 @@ namespace App.Pages;
 
 public partial class Temas_ciencias : ContentPage
 {
-	public Temas_ciencias()
+    public Temas_ciencias()
 	{
 		InitializeComponent();
+
         Shell.SetNavBarIsVisible(this, false);
         CargarTemas();
     }

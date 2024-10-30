@@ -5,7 +5,7 @@
              >
     <ScrollView>
         <VerticalStackLayout Spacing="15">
-            <HorizontalStackLayout Background="#c1ff72" HeightRequest="65" Spacing="80">
+            <HorizontalStackLayout Background="#c1ff72" HeightRequest="65" Spacing="50">
                 <ImageButton Source="backicon.png"
                          HorizontalOptions="Start"
                          HeightRequest="35"
@@ -80,7 +80,185 @@
                        Grid.Column="1" 
                        />
             </Grid>
+            <Grid Margin="20" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Columna para la imagen de caballo -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Columna para la imagen de tigre -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Columna para la imagen de pez -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Columna para la imagen de elefante -->
+                </Grid.ColumnDefinitions>
 
+                <Image Source="Images/caballo.png" WidthRequest="70" HeightRequest="70" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Grid.Column="0" />
+
+                <Image Source="Images/tigre.png" WidthRequest="70" HeightRequest="70" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Grid.Column="1" />
+
+                <Image Source="Images/pez.png" WidthRequest="70" HeightRequest="70" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Grid.Column="2" />
+
+                <Image Source="Images/elefante.png" WidthRequest="70" HeightRequest="70" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Grid.Column="3" />
+            </Grid>
+                
+            <Label Text="Existen diferentes clases de animales"
+        FontSize="22"
+        FontAttributes="Bold"
+        TextColor="#c1ff72"
+        HorizontalOptions="Center"
+        VerticalOptions="Center" 
+        Margin="20" />
+
+            <Label Text="En la naturaleza hay una gran variedad de animales. De acuerdo con sus características, estos se clasifican en diferentes clases, algunas de ellas son: mamíferos, aves, peces e insectos."
+        FontSize="16"
+        HorizontalOptions="Center"
+        VerticalOptions="Start"
+        Margin="10"
+        LineBreakMode="WordWrap" />
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!-- Para el texto -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Para la imagen -->
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Mamíferos: Los mamíferos son animales que alimentan con leche a sus crías, la mayor parte de ellos tienen cuatro extremidades y su cuerpo cubierto de pelos."
+FontSize="16"
+LineBreakMode="WordWrap"
+VerticalOptions="Center"
+Grid.Column="0" />
+
+                <Image Source="Images/ImagenesCiencia/conejo.png" WidthRequest="100" HeightRequest="100" 
+VerticalOptions="Center" 
+Grid.Column="1" />
+            </Grid>
+
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Para la imagen -->
+                    <ColumnDefinition Width="*" />
+                    <!-- Para el texto -->
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Images/ImagenesCiencia/loro.png" WidthRequest="100" HeightRequest="100" Grid.Column="0" VerticalOptions="Center" />
+
+                <Label Text="Aves: Las aves son los únicos animales que tienen su piel cubierta de vistosas plumas. Las aves son animales que tienen dos alas y dos patas. Algunas de ellas vuelan, otras caminan o corren y unas pocas pueden nadar."
+FontSize="16"
+LineBreakMode="WordWrap"
+VerticalOptions="Center"
+Grid.Column="1" />
+            </Grid>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!-- Para el texto -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Para la imagen -->
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Peces: Los peces viven en el agua. Su cuerpo, por lo general, está cubierto de escamas que pueden ser de diferentes colores. Para nadar utilizan la cola y las aletas"
+FontSize="16"
+LineBreakMode="WordWrap"
+VerticalOptions="Center"
+Grid.Column="0" />
+
+                <Image Source="Images/ImagenesCiencia/pez2.png" WidthRequest="100" HeightRequest="100" 
+VerticalOptions="Center" 
+Grid.Column="1" />
+            </Grid>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Para la imagen -->
+                    <ColumnDefinition Width="*" />
+                    <!-- Para el texto -->
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Images/ImagenesCiencia/mariquita.png" WidthRequest="95" HeightRequest="95" Grid.Column="0" VerticalOptions="Center" />
+
+                <Label Text="Insectos: Los insectos tienen el cuerpo dividido en cabeza, tórax y abdomen. Están protegidos por un exoesqueleto y tienen seis patas. Algunos, como la abeja, la mosca y el zancudo, también tienen alas."
+FontSize="16"
+LineBreakMode="WordWrap"
+VerticalOptions="Center"
+Grid.Column="1" />
+            </Grid>
+
+            <Frame BorderColor="Green" BackgroundColor="Transparent" Padding="10" Margin="20" CornerRadius="5">
+                <!-- Aumenté el margen a 20 -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <!-- Para el título negro -->
+                        <RowDefinition Height="Auto" />
+                        <!-- Para el título verde -->
+                        <RowDefinition Height="*" />
+                        <!-- Para el contenido -->
+                    </Grid.RowDefinitions>
+
+                    <Label Text="VENTANA CIENTÍFICA" 
+    FontSize="20" 
+    TextColor="Black" 
+    HorizontalOptions="Center" 
+    VerticalOptions="Start" 
+    Grid.Row="0" />
+
+                    <Label Text="¿La ballena es un pez?" 
+    FontSize="18" 
+    TextColor="Green" 
+    HorizontalOptions="Center" 
+    VerticalOptions="Start" 
+    Grid.Row="1" />
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <!-- Para el texto -->
+                            <ColumnDefinition Width="Auto" />
+                            <!-- Para la imagen -->
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Aunque vive en el mar, la ballena es un mamífero, no un pez. Alimenta a sus crías con leche y respira por espiráculos en su cabeza. Son rápidas nadadoras y pueden estar mucho tiempo bajo el agua."
+        FontSize="16"
+        LineBreakMode="WordWrap"
+        VerticalOptions="Center" 
+        HorizontalOptions="StartAndExpand" 
+        Grid.Column="0" />
+
+                        <Image Source="Images/ballena.png" WidthRequest="100" HeightRequest="100" 
+        VerticalOptions="Center" 
+        HorizontalOptions="End" 
+        Grid.Column="1" />
+                    </Grid>
+                </Grid>
+            </Frame>
+
+            <Button
+                Text="Finalizar Clase"
+                FontAttributes="Bold"
+                FontSize="15"
+                HorizontalOptions="End"
+                Margin="20"
+                Background="#7ed957"
+                Clicked="FinalizarClase"
+                />
         </VerticalStackLayout>
+        
     </ScrollView>
 </ContentPage>

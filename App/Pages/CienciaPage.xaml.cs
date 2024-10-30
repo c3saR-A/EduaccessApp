@@ -6,6 +6,7 @@ public partial class CienciaPage : ContentPage
     public CienciaPage()
     {
         InitializeComponent();
+
         //Hacer invisible la barra de navegación
         Shell.SetNavBarIsVisible(this, false);
     }
