@@ -1,4 +1,6 @@
 using App.DataAccess;
+using App.Pages.Pruebas.Ciencias;
+using App.Pages.Temas.Ciencia;
 using Microsoft.EntityFrameworkCore;
 
 namespace App.Pages;
@@ -29,6 +31,30 @@ public partial class PruebasCiencias : ContentPage
 
             // Reemplaza el Picker en el XAML con el nuevo Picker
             PickerstackLayout.Children.Add(picker);
+        }
+    }
+
+    private async void OnContinuarClicked(object sender, EventArgs e)
+    {
+        // Verifica si hay un tema seleccionado en el Picker
+        if (PickerstackLayout.Children.Count > 0 && PickerstackLayout.Children[0] is Picker PracticaPicker)
+        {
+            var PracticaSeleccionada = PracticaPicker.SelectedItem?.ToString();
+
+            // Navega a la página correspondiente según el tema seleccionado
+            switch (PracticaSeleccionada)
+            {
+                case "Práctica de Ciencias 1":
+                    await Navigation.PushAsync(new prueba1ciencias());
+                    break;
+                default:
+                    await DisplayAlert("Error", "Practica no reconocida.", "OK");
+                    break;
+            }
+        }
+        else
+        {
+            await DisplayAlert("Error", "Por favor, selecciona una practica antes de continuar.", "OK");
         }
     }
     private async void BackCienciaPage(object sender, EventArgs e)
