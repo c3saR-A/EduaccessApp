@@ -36,19 +36,19 @@ public partial class PruebasCiencias : ContentPage
 
     private async void OnContinuarClicked(object sender, EventArgs e)
     {
-        // Verifica si hay un tema seleccionado en el Picker
-        if (PickerstackLayout.Children.Count > 0 && PickerstackLayout.Children[0] is Picker PracticaPicker)
+        // Verifica si hay una practica seleccionado en el Picker
+        if (PickerstackLayout.Children.Count > 0 && PickerstackLayout.Children[0] is Picker temaPicker)
         {
-            var PracticaSeleccionada = PracticaPicker.SelectedItem?.ToString();
+            var temaSeleccionado = temaPicker.SelectedItem?.ToString();
 
-            // Navega a la página correspondiente según el tema seleccionado
-            switch (PracticaSeleccionada)
+            // Navega a la página correspondiente según lo seleccionado
+            switch (temaSeleccionado)
             {
                 case "Práctica de Ciencias 1":
                     await Navigation.PushAsync(new prueba1ciencias());
                     break;
                 default:
-                    await DisplayAlert("Error", "Practica no reconocida.", "OK");
+                    await DisplayAlert("Error", "Practica no reconocido.", "OK");
                     break;
             }
         }

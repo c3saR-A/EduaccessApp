@@ -11,8 +11,8 @@ namespace App.Models
             public int Id { get; set; }
             public int IdUsuario { get; set; }
             public int IdMateria { get; set; }
-            public int? IdClase { get; set; }  // Relación opcional con Clase
-            public int? IdPractica { get; set; }  // Relación opcional con Practica
+            public int? IdClase { get; set; }  
+            public int? IdPractica { get; set; }  
             public bool ClaseCompletada { get; set; }
             public bool PracticaCompletada { get; set; }
             public Materia Materia { get; set; }
